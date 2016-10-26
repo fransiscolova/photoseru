@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#546546"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="#00ffffff"
+        android:layout_gravity="top"
+        >
+
+        <!-- To display picture taken -->
+
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <!-- Videoview to preview recorded video -->
+
+        <VideoView
+            android:id="@+id/videoPreview"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            
+            android:layout_marginTop="1dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+         android:background="#00ffffff" >
+
+        <TextView
+            android:id="@+id/txtPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/txt_font"
+            android:textSize="25dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="1dp"
+            android:visibility="gone" />
+
+     <RelativeLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:layout_gravity="bottom">
+    
+         
+         
+          <EditText
+        android:id="@+id/editTextCap"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        
+        />
+        
+        <Button
+            android:id="@+id/btnUpload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"      
+            android:layout_alignParentLeft="true"      
+            android:text="@string/btnUploadToServer"
+            android:layout_below="@+id/editTextCap"
+            />
+
+        
+        <Button
+            android:id="@+id/btnHastag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/btnHashTag"
+             android:layout_below="@+id/editTextCap"
+             />
+        
+        
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>
