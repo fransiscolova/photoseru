@@ -137,23 +137,28 @@ public class GetEventsActivity extends ListActivity {
 				// on selecting a single album
 				// TrackListActivity will be launched to show tracks inside the
 				// album
-				Intent i = new Intent(getApplicationContext(),
-						HomeActivity.class);
+				
+				
+				
+				
+				
+				//Intent i = new Intent(getApplicationContext(),
+						//HomeActivity.class);
 
 				// send album id to tracklist activity to get list of songs
 				// under that album
-				String idevent = ((TextView) view.findViewById(R.id.album_id))
-						.getText().toString();
-				i.putExtra("idevent", idevent);
+				//String idevent = ((TextView) view.findViewById(R.id.album_id))
+						//.getText().toString();
+				//i.putExtra("idevent", idevent);
 
-				startActivity(i);
+				//startActivity(i);
 			}
 		});
 		
 		
 		
-		
 
+	
 		button = (Button) findViewById(R.id.btnAddEvent);
 		button.setText(" #Enter Event ");
 
@@ -205,6 +210,21 @@ public class GetEventsActivity extends ListActivity {
 
 				// show it
 				alertDialog.show();
+/*
+				final CharSequence[] items = {"A", "B", "C"};
+
+			    AlertDialog.Builder builder = new AlertDialog.Builder(GetEventsActivity.this);
+			    builder.setTitle("Make your selection");
+			    builder.setItems(items, new DialogInterface.OnClickListener() {
+			        public void onClick(DialogInterface dialog, int item) {
+			            // Do something with the selection
+			          //  mDoneButton.setText(items[item]);
+			        }
+			    });
+			    AlertDialog alert = builder.create();
+			    alert.show();
+
+*/			
 
 			}
 
